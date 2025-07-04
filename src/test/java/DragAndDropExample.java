@@ -17,10 +17,8 @@ public class DragAndDropExample {
 
     @Test
     void dragAndDropAction() {
-        open("/drag_and_drop"); // Открываем нужны сайт
+        open("/drag_and_drop");
         actions().moveToElement($("#column-a")).clickAndHold().moveByOffset(150, 0).release().perform();
-        // actions - нужен, чтобы всю цепочку запустить, .moveToElement - перемещает курсор в центр заданного элемента, .clickAndHold - имитирует нажати и удрежание,
-        // moveByOffset - сдвигает выбранный элемент на кол-во заданных пикселей, .release - имитирует отпускание лкм, .perform() - завершает выполнение всех действий
         $("#column-a header").shouldHave(text("B"));
     }
 
