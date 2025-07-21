@@ -26,10 +26,10 @@ public class DragAndDropExample {
 
     @Test
     void dragAndDropTest() {
-        open("/drag_and_drop"); // Открываем нужны сайт
+        open("/drag_and_drop");
         $("#column-a").shouldHave(text("A"));
         $("#column-b").shouldHave(text("B"));
-        $("#column-a").dragAndDrop(to("#column-b")); // Аналог команды выше, но упрощенный в написании
+        $("#column-a").dragAndDrop(to("#column-b"));
         $("#column-a header").shouldHave(text("B"));
     }
 }
