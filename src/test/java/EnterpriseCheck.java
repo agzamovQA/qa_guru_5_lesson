@@ -16,7 +16,7 @@ public class EnterpriseCheck {
     }
 
     @Test
-    void openEnterpriseHover() {
+    void openEnterpriseHoverTest() {
         open("https://github.com/");
         $(byTagAndText("button", "Solutions")).hover();
         $(byText( "Enterprises")).click();
